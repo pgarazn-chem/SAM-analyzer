@@ -17,17 +17,31 @@ Este proyecto utiliza [uv](https://github.com/astral-sh/uv) como gestor de paque
 
 1. Clona este repositorio en tu máquina local.
 2. Navega hasta la carpeta del proyecto:
-      bash
-      cd proyecto-sam
-3. Ejecuta el programa pasándole la ruta de tu archivo .sam:
-uv run python main.py <ruta_de_tu_archivo.sam>
+   ```bash
+   cd proyecto-sam
+   uv run python main.py <ruta_de_tu_archivo.sam>
+    ```
 
 ## Ejemplo de Salida
 
-El script devolverá una bella tabla coloreada con:
+El script devolverá una bella tabla coloreada en tu terminal con la siguiente información:
 
-    -Total de lecturas alineadas.
+    Total de lecturas alineadas.
 
-    -Lecturas con MAPQ = 60.
+    Lecturas con MAPQ = 60.
 
-    -Porcentaje correspondiente.
+    Porcentaje correspondiente.
+
+## Ejecución con Nextflow
+
+Para integrar este análisis en flujos de trabajo bioinformáticos más grandes y reproducibles, este proyecto incluye un pipeline configurado con Nextflow.
+
+El uso de Nextflow automatiza la llamada a Python mediante uv y gestiona la salida de los datos.
+Instrucciones de uso con Nextflow:
+
+Asegúrate de estar en el directorio del proyecto y ejecuta el siguiente comando, indicando la ruta de tu archivo con el parámetro --sam:
+    ```nextflow run main.nf --sam <ruta_de_tu_archivo.sam>
+    ```
+
+## Salida del Pipeline:
+Al usar Nextflow, el programa no solo imprimirá la tabla de resultados en tu pantalla, sino que además creará automáticamente un registro de texto limpio (sin códigos de color) en la carpeta resultados/, guardado bajo el nombre output_nombredelarchivo.txt
