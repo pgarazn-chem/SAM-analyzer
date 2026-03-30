@@ -17,14 +17,14 @@ Este proyecto utiliza [uv](https://github.com/astral-sh/uv) como gestor de paque
 
 1. Clona este repositorio en tu máquina local.
 2. Navega hasta la carpeta del proyecto:
-   bash
-   cd proyecto-sam
+      bash
+      cd proyecto-sam
 3. Ejecuta el programa pasándole la ruta de tu archivo .sam:
 uv run python main.py <ruta_de_tu_archivo.sam>
 
-Ejemplo de Salida
+## Ejemplo de Salida
 
-## El script devolverá una bella tabla coloreada con:
+El script devolverá una bella tabla coloreada con:
 
     -Total de lecturas alineadas.
 
