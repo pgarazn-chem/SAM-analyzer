@@ -17,7 +17,8 @@ Este proyecto utiliza [uv](https://github.com/astral-sh/uv) como gestor de paque
 
 1. Clona este repositorio en tu máquina local.
 2. Instala la dependencia `rich`
-   ``` uv add rich
+   ```
+   uv add rich
    ```
 3. Navega hasta la carpeta del proyecto:
    ```bash
