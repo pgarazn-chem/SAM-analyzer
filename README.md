@@ -16,7 +16,10 @@ Este proyecto utiliza [uv](https://github.com/astral-sh/uv) como gestor de paque
 ## Instalación y Uso
 
 1. Clona este repositorio en tu máquina local.
-2. Navega hasta la carpeta del proyecto:
+2. Instala la dependencia `rich`
+   ```uv add rich
+   ```
+3. Navega hasta la carpeta del proyecto:
    ```bash
    cd proyecto-sam
    uv run python main.py <ruta_de_tu_archivo.sam>
